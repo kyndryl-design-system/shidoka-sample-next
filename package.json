@@ -9,16 +9,24 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@carbon/icons-react": "^11.28.0",
+    "@kyndryl-design-system/shidoka-applications": "^1.0.0-beta.68",
+    "@kyndryl-design-system/shidoka-charts": "^1.0.0-beta.14",
+    "@kyndryl-design-system/shidoka-foundation": "^1.0.0-beta.37",
+    "next": "13.5.6",
     "react": "^18",
     "react-dom": "^18",
-    "next": "13.5.6"
+    "reactify-wc": "^4.0.0",
+    "sass": "^1.69.4"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@types/carbon__icons-react": "^11.26.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "babel-plugin-inline-react-svg": "^2.0.2",
     "eslint": "^8",
-    "eslint-config-next": "13.5.6"
+    "eslint-config-next": "13.5.6",
+    "typescript": "^5"
   }
 }
