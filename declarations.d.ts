@@ -8,6 +8,7 @@ declare namespace JSX {
     'kyn-header-flyout': any;
     'kyn-header-panel': any;
     'kyn-header-panel-link': any;
+    'kyn-header-user-profile': any;
     'kyn-header-avatar': any;
     'kyn-local-nav': any;
     'kyn-local-nav-link': any;
