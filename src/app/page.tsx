@@ -1,7 +1,7 @@
 'use client';
 
 import reactifyWc from 'reactify-wc';
-import '@kyndryl-design-system/shidoka-charts/components/chart';
+// import '@kyndryl-design-system/shidoka-charts/components/chart';
 
 const KdChart = reactifyWc('kd-chart');
 
@@ -13,7 +13,7 @@ export default function Home() {
           <h1 className="kd-type--headline-03">Shidoka Next Sample App</h1>
         </div>
 
-        <div className="kd-grid__col--sm-4 kd-grid__col--md-4 kd-grid__col--lg-8">
+        {/* <div className="kd-grid__col--sm-4 kd-grid__col--md-4 kd-grid__col--lg-8">
           <KdChart
             type="bar"
             height="400"
@@ -75,7 +75,7 @@ export default function Home() {
               },
             }}
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );
