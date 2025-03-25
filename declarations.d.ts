@@ -16,5 +16,7 @@ declare namespace JSX {
     'kyn-footer-nav': any;
     'kyn-footer-nav-link': any;
     'kd-chart': any;
+    'UserAvatar': any;
+    'CircleStroke': any;
   }
 }

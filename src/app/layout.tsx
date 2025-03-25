@@ -9,21 +9,25 @@ import '@kyndryl-design-system/shidoka-applications/components/global/header';
 import '@kyndryl-design-system/shidoka-applications/components/global/localNav';
 import '@kyndryl-design-system/shidoka-applications/components/global/footer';
 
-import { UserAvatar } from '@carbon/icons-react';
+import CircleStroke from '@kyndryl-design-system/shidoka-icons/svg/monochrome/16/circle-stroke.svg';
+import UserAvatar from '@kyndryl-design-system/shidoka-icons/svg/monochrome/16/user.svg';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+      <meta name="color-scheme" content="light dark" />
+      </head>
       <body>
         <kyn-ui-shell>
           <kyn-header divider="" apptitle="Shidoka Next">
             <kyn-header-nav>
-              <kyn-header-link href="javascript:void(0)"> Link 1 </kyn-header-link>
-              <kyn-header-link href="javascript:void(0)" isActive>
+              <kyn-header-link href="javascript:void(0)"><CircleStroke/> Link 1 </kyn-header-link>
+              <kyn-header-link href="javascript:void(0)" isActive><CircleStroke/>
                 {' '}
                 Link 2{' '}
               </kyn-header-link>
-              <kyn-header-link href="javascript:void(0)">
+              <kyn-header-link href="javascript:void(0)"><CircleStroke/>
                 Link 3
                 <kyn-header-link slot="links" href="javascript:void(0)">
                   {' '}
@@ -39,15 +43,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <kyn-header-flyouts>
               <kyn-header-flyout>
                 <span slot="button">Login</span>
-
-                <div>
                   <kyn-header-link href="javascript:void(0)"> Login </kyn-header-link>
                   <kyn-header-link href="javascript:void(0)"> Sign up </kyn-header-link>
-                </div>
               </kyn-header-flyout>
 
               <kyn-header-flyout assistiveText="My Account" hideMenuLabel>
-                <UserAvatar size={20} slot="button" />
+                <UserAvatar slot="button" />
 
                 <kyn-header-user-profile
                   name="User Name"
@@ -63,12 +64,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
           <kyn-local-nav>
             <kyn-local-nav-link href="javascript:void(0)" active="">
-              <UserAvatar size={16} slot="icon" />
+              <UserAvatar  slot="icon" class="iconStyle"/>
               Link 1
             </kyn-local-nav-link>
 
             <kyn-local-nav-link href="javascript:void(0)">
-              <UserAvatar size={16} slot="icon" />
+              <UserAvatar  slot="icon" class="iconStyle" />
               Link 2
               <kyn-local-nav-link slot="links" href="javascript:void(0)">
                 {' '}
@@ -81,7 +82,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </kyn-local-nav-link>
 
             <kyn-local-nav-link href="javascript:void(0)" expanded="">
-              <UserAvatar size={16} slot="icon" />
+              <UserAvatar slot="icon" class="iconStyle"/>
               Link 3
               <kyn-local-nav-link slot="links" href="javascript:void(0)">
                 L2 Link 1
@@ -100,7 +101,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main>{children}</main>
 
           <kyn-footer>
-            <span slot="copyright"> Copyright &copy; 2023 Kyndryl Inc. All rights reserved. </span>
+            <span slot="copyright"> Copyright &copy; 2025 Kyndryl Inc. All rights reserved. </span>
           </kyn-footer>
         </kyn-ui-shell>
       </body>
