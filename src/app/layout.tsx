@@ -1,5 +1,4 @@
 'use client';
-
 import '@kyndryl-design-system/shidoka-foundation/scss/root.scss';
 import './globals.css';
 import '@kyndryl-design-system/shidoka-foundation/scss/utility/typography.scss';
@@ -8,9 +7,10 @@ import '@kyndryl-design-system/shidoka-applications/components/global/uiShell';
 import '@kyndryl-design-system/shidoka-applications/components/global/header';
 import '@kyndryl-design-system/shidoka-applications/components/global/localNav';
 import '@kyndryl-design-system/shidoka-applications/components/global/footer';
-
+import Image from 'next/image'
 import CircleStroke from '@kyndryl-design-system/shidoka-icons/svg/monochrome/16/circle-stroke.svg';
-import UserAvatar from '@kyndryl-design-system/shidoka-icons/svg/monochrome/16/user.svg';
+import UserAvatar16  from '@kyndryl-design-system/shidoka-icons/svg/monochrome/16/user.svg';
+import UserAvatar20 from '@kyndryl-design-system/shidoka-icons/svg/monochrome/20/user.svg';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -48,7 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </kyn-header-flyout>
 
               <kyn-header-flyout assistiveText="My Account" hideMenuLabel>
-                <UserAvatar slot="button" />
+                <UserAvatar20 slot="button" />
 
                 <kyn-header-user-profile
                   name="User Name"
@@ -56,7 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   email="user@kyndryl.com"
                   profileLink="#"
                 >
-                  <img src="https://picsum.photos/id/237/112/112" />
+                  <Image src="https://picsum.photos/id/237/112/112" width={56} height={56} alt="profile picture"/>
                 </kyn-header-user-profile>
               </kyn-header-flyout>
             </kyn-header-flyouts>
@@ -64,12 +64,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
           <kyn-local-nav>
             <kyn-local-nav-link href="javascript:void(0)" active="">
-              <UserAvatar  slot="icon" class="iconStyle"/>
+              <UserAvatar16  slot="icon"/>
               Link 1
             </kyn-local-nav-link>
 
             <kyn-local-nav-link href="javascript:void(0)">
-              <UserAvatar  slot="icon" class="iconStyle" />
+              <UserAvatar16  slot="icon"/>
               Link 2
               <kyn-local-nav-link slot="links" href="javascript:void(0)">
                 {' '}
@@ -82,7 +82,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </kyn-local-nav-link>
 
             <kyn-local-nav-link href="javascript:void(0)" expanded="">
-              <UserAvatar slot="icon" class="iconStyle"/>
+              <UserAvatar16 slot="icon"/>
               Link 3
               <kyn-local-nav-link slot="links" href="javascript:void(0)">
                 L2 Link 1

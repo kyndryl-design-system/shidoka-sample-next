@@ -1,9 +1,18 @@
 'use client';
-
 import reactifyWc from 'reactify-wc';
 import '@kyndryl-design-system/shidoka-charts/components/chart';
 
-const KdChart = reactifyWc('kd-chart');
+interface KdChartProps {
+  type: string;
+  height: string;
+  chartTitle: string;
+  description: string;
+  labels: string[];
+  datasets: { label: string; data: number[] }[];
+  options: any;
+}
+
+const KdChart = reactifyWc('kd-chart') as React.FC<KdChartProps>;
 
 export default function Home() {
   return (
