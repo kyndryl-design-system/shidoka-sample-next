@@ -1,18 +1,6 @@
 'use client';
-import reactifyWc from 'reactify-wc';
+
 import '@kyndryl-design-system/shidoka-charts/components/chart';
-
-interface KdChartProps {
-  type: string;
-  height: string;
-  chartTitle: string;
-  description: string;
-  labels: string[];
-  datasets: { label: string; data: number[] }[];
-  options: any;
-}
-
-const KdChart = reactifyWc('kd-chart') as React.FC<KdChartProps>;
 
 export default function Home() {
   return (
@@ -23,7 +11,7 @@ export default function Home() {
         </div>
 
         <div className="kd-grid__col--sm-4 kd-grid__col--md-4 kd-grid__col--lg-8">
-          <KdChart
+          <kd-chart
             type="bar"
             height="400"
             chartTitle="Bar Chart"
@@ -57,7 +45,7 @@ export default function Home() {
         </div>
 
         <div className="kd-grid__col--sm-4 kd-grid__col--md-4 kd-grid__col--lg-4">
-          <KdChart
+          <kd-chart
             type="doughnut"
             chartTitle="Doughnut Chart"
             description="Description"
